@@ -117,34 +117,34 @@ const Grocery = props => {
                         <div className="form-group">
                             <label>
                                 <strong>Status:</strong>
-                            </label>
+                            </label>{" "}
                             {currentGrocery.purchased ? "Purchased" : "Need to buy"}
                         </div>
                     </form>
 
                     {currentGrocery.purchased ? (
                         <button
-                            className="badge badge-primary mr-2"
+                            className="btn btn-primary btn-sm mr-3"
                             onClick={() => editPurchased(false)}
                         >
                             Need to buy
                         </button>
                     ) : (
                         <button
-                            className="badge badge-primary mr-2"
+                            className="btn btn-primary btn-sm mr-3"
                             onClick={() => editPurchased(true)}
                         >
                             Already purchased
                         </button>
                     )}
 
-                    <button className="badge badge-danger mr-2" onClick={deleteGrocery}>
+                    <button className="btn btn-danger btn-sm mr-3" onClick={deleteGrocery}>
                         Delete
                     </button>
 
                     <button
                         type="submit"
-                        className="badge badge-success"
+                        className="btn btn-success btn-sm"
                         onClick={editGrocery}
                     >
                         Update
