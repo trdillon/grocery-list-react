@@ -23,8 +23,8 @@ const GroceryList = () => {
             });
     };
 
-    const onChangeSearchName = e => {
-        const searchName = e.target.value;
+    const onChangeSearchName = event => {
+        const searchName = event.target.value;
         setSearchName(searchName);
     };
 

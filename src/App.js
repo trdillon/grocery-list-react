@@ -3,6 +3,10 @@ import { Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
+import AddGrocery from "./component/AddGrocery";
+import Grocery from "./component/Grocery";
+import GroceryList from "./component/GroceryList";
+
 function App() {
   return(
       <div className="app">
