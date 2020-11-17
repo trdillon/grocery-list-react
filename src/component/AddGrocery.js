@@ -31,6 +31,7 @@ const AddGrocery = () => {
                     id: response.data.id,
                     name: response.data.name,
                     quantity: response.data.quantity,
+                    notes: response.data.notes,
                     purchased: response.data.purchased
                 });
                 setSubmitted(true);
