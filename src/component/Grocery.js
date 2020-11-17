@@ -5,7 +5,7 @@ const Grocery = props => {
     const initialGroceryState = {
         id: null,
         name: "",
-        quantity: null,
+        quantity: 1,
         notes: "",
         purchased: false
     };
