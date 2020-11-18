@@ -1,10 +1,13 @@
 {
   "name": "grocery-list-frontend",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
+    "core-js": "^3.7.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
