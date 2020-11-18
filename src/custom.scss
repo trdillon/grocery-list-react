@@ -1,0 +1,38 @@
+// custom.scss
+//
+//-------------------- Theme Colors --------------------//
+//
+$theme-colors: (
+        "primary": #117A8A,
+        "secondary": #117A8A,
+        "success": #117A8A,
+        "info": #00aedb,
+        "warning": #54CDBE,
+        "danger": #54CDBE
+);
+//
+//-------------------- Navbar --------------------//
+//
+.navbar {
+  background-color: #117A8A;
+}
+//
+//-------------------- Misc --------------------//
+//
+.list {
+  text-align: left;
+  max-width: 750px;
+  margin: auto;
+}
+
+.submit-form {
+  max-width: 300px;
+  margin: auto;
+}
+
+.edit-form {
+  max-width: 300px;
+  margin: auto;
+}
+//-------------------- Import Bootstrap --------------------//
+@import '../node_modules/bootstrap/scss/bootstrap';

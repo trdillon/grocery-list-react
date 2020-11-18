@@ -138,16 +138,16 @@ const Grocery = props => {
                         </button>
                     )}
 
-                    <button className="btn btn-danger btn-sm mr-3" onClick={deleteGrocery}>
-                        Delete
-                    </button>
-
                     <button
                         type="submit"
-                        className="btn btn-success btn-sm"
+                        className="btn btn-success btn-sm mr-3"
                         onClick={editGrocery}
                     >
                         Update
+                    </button>
+
+                    <button className="btn btn-danger btn-sm" onClick={deleteGrocery}>
+                        Delete
                     </button>
                     <p>{message}</p>
                 </div>

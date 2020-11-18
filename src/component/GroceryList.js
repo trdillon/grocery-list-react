@@ -137,7 +137,7 @@ const GroceryList = () => {
 
                         <Link
                             to={"/grocery/" + currentGrocery.id}
-                            className="badge badge-warning"
+                            className="btn btn-sm btn-primary"
                         >
                             Edit
                         </Link>

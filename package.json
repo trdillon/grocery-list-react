@@ -1,7 +1,13 @@
 {
   "name": "grocery-list-frontend",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "private": true,
+  "description": "Grocery List app made with React and Spring Boot",
+  "author": {
+    "name": "Tim Dillon",
+    "email": "tim@itsdits.com",
+    "url": "https://itsdits.com"
+  },
   "dependencies": {
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
@@ -36,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.29.0"
   }
 }
