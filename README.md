@@ -2,7 +2,9 @@
 
 ![Grocery List webapp](readme.jpg?raw=true "Grocery List webapp")
 
-### <a href="http://grocery.itsdits.com/">Live Demo</a> 
+### <a href="http://grocery.itsdits.com/">Live Demo</a>
+
+### The backend for this project can be found <a href="github.com/trdillon/grocery-list-spring">here.</a>
 
 ## Description
 This is a simple grocery list app to keep track of what groceries you need to purchase.
