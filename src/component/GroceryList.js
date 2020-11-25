@@ -124,6 +124,12 @@ const GroceryList = () => {
                         </div>
                         <div>
                             <label>
+                                <strong>Price:</strong>
+                            </label>{" "}
+                            {currentGrocery.price}
+                        </div>
+                        <div>
+                            <label>
                                 <strong>Notes:</strong>
                             </label>{" "}
                             {currentGrocery.notes}

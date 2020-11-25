@@ -6,6 +6,7 @@ const AddGrocery = () => {
         id: null,
         name: "",
         quantity: 1,
+        price: 0,
         notes: "",
         purchased: false
     };
@@ -22,6 +23,7 @@ const AddGrocery = () => {
         let data = {
             name: grocery.name,
             quantity: grocery.quantity,
+            price: grocery.price,
             notes: grocery.notes
         };
 
@@ -31,6 +33,7 @@ const AddGrocery = () => {
                     id: response.data.id,
                     name: response.data.name,
                     quantity: response.data.quantity,
+                    price: response.data.price,
                     notes: response.data.notes,
                     purchased: response.data.purchased
                 });
@@ -80,6 +83,18 @@ const AddGrocery = () => {
                             value={grocery.quantity}
                             onChange={handleInputChange}
                             name="quantity"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="price">Price</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            id="price"
+                            required
+                            value={grocery.price}
+                            onChange={handleInputChange}
+                            name="price"
                         />
                     </div>
                     <div className="form-group">

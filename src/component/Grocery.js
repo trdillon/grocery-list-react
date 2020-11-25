@@ -6,6 +6,7 @@ const Grocery = props => {
         id: null,
         name: "",
         quantity: 1,
+        price: 0,
         notes: "",
         purchased: false
     };
@@ -38,6 +39,7 @@ const Grocery = props => {
             id: currentGrocery.id,
             name: currentGrocery.name,
             quantity: currentGrocery.quantity,
+            price: currentGrocery.price,
             notes: currentGrocery.notes,
             purchased: status
         };
@@ -99,6 +101,17 @@ const Grocery = props => {
                                 id="quantity"
                                 name="quantity"
                                 value={currentGrocery.quantity}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="price">Price</label>
+                            <input
+                                type="number"
+                                className="form-control"
+                                id="price"
+                                name="price"
+                                value={currentGrocery.price}
                                 onChange={handleInputChange}
                             />
                         </div>
