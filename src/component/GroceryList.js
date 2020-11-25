@@ -125,7 +125,7 @@ const GroceryList = () => {
                         <div>
                             <label>
                                 <strong>Price:</strong>
-                            </label>{" "}
+                            </label>{" ¥"}
                             {currentGrocery.price}
                         </div>
                         <div>
