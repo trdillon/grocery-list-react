@@ -20,6 +20,10 @@ const getPurchased = () => {
     return http.get("/grocery/purchased");
 }
 
+const getFavs = () => {
+    return http.get("/grocery/favs");
+}
+
 const add = data => {
     return http.post("/grocery", data);
 };
@@ -42,6 +46,7 @@ export default {
     getByName,
     getNeeded,
     getPurchased,
+    getFavs,
     add,
     edit,
     remove,

@@ -8,7 +8,8 @@ const AddGrocery = () => {
         quantity: 1,
         price: 0,
         notes: "",
-        purchased: false
+        purchased: false,
+        favorite: false
     };
 
     const [grocery, setGrocery] = useState(initialGroceryState);
@@ -35,7 +36,8 @@ const AddGrocery = () => {
                     quantity: response.data.quantity,
                     price: response.data.price,
                     notes: response.data.notes,
-                    purchased: response.data.purchased
+                    purchased: response.data.purchased,
+                    favorite: response.data.favorite
                 });
                 setSubmitted(true);
                 console.log(response.data);

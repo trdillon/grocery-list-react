@@ -1,6 +1,6 @@
 {
   "name": "grocery-list-frontend",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "description": "Grocery List app made with React and Spring Boot",
   "author": {

@@ -5,12 +5,15 @@ import TagManager from 'react-gtm-module'
 import Header from "./component/Header";
 
 const tagManagerArgs = {
-    gtmId: 'GTM-xxxxxx'
+    gtmId: 'GTM-PDGQF24'
 };
 
 TagManager.initialize(tagManagerArgs)
 
 function App() {
+    window.dataLayer.push({
+        event: 'pageview'
+    });
   return(
       <div className="app">
         <Header />

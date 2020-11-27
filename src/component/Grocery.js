@@ -8,7 +8,8 @@ const Grocery = props => {
         quantity: 1,
         price: 0,
         notes: "",
-        purchased: false
+        purchased: false,
+        favorite: false
     };
 
     const [currentGrocery, setCurrentGrocery] = useState(initialGroceryState);
@@ -41,12 +42,34 @@ const Grocery = props => {
             quantity: currentGrocery.quantity,
             price: currentGrocery.price,
             notes: currentGrocery.notes,
-            purchased: status
+            purchased: status,
+            favorite: currentGrocery.favorite
         };
 
         GroceryService.edit(currentGrocery.id, data)
             .then(response => {
                 setCurrentGrocery({ ...currentGrocery, purchased: status });
+                console.log(response.data);
+            })
+            .catch(e => {
+                console.log(e);
+            });
+    };
+
+    const editFavorite = status => {
+        let data = {
+            id: currentGrocery.id,
+            name: currentGrocery.name,
+            quantity: currentGrocery.quantity,
+            price: currentGrocery.price,
+            notes: currentGrocery.notes,
+            purchased: currentGrocery.purchased,
+            favorite: status
+        };
+
+        GroceryService.edit(currentGrocery.id, data)
+            .then(response => {
+                setCurrentGrocery({ ...currentGrocery, favorite: status });
                 console.log(response.data);
             })
             .catch(e => {
@@ -126,12 +149,17 @@ const Grocery = props => {
                                 onChange={handleInputChange}
                             />
                         </div>
-
                         <div className="form-group">
                             <label>
                                 <strong>Status:</strong>
                             </label>{" "}
                             {currentGrocery.purchased ? "Purchased" : "Need to buy"}
+                        </div>
+                        <div className="form-group">
+                            <label>
+                                <strong>Favorite:</strong>
+                            </label>{" "}
+                            {currentGrocery.favorite ? "Yes" : "No"}
                         </div>
                     </form>
 
@@ -148,6 +176,22 @@ const Grocery = props => {
                             onClick={() => editPurchased(true)}
                         >
                             Already purchased
+                        </button>
+                    )}
+
+                    {currentGrocery.favorite ? (
+                        <button
+                            className="btn btn-primary btn-sm mr-3"
+                            onClick={() => editFavorite(false)}
+                        >
+                            No
+                        </button>
+                    ) : (
+                        <button
+                            className="btn btn-primary btn-sm mr-3"
+                            onClick={() => editFavorite(true)}
+                        >
+                            Yes
                         </button>
                     )}
 

@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import GroceryService from "../service/GroceryService";
 import { Link } from "react-router-dom";
 
-const GroceryList = () => {
+const FavoritesList = () => {
     const [groceries, setGroceries] = useState([]);
     const [currentGrocery, setCurrentGrocery] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(-1);
     const [searchName, setSearchName] = useState("");
 
     useEffect(() => {
-        getGroceryList();
+        getFavoritesList();
     }, []);
 
-    const getGroceryList = () => {
-        GroceryService.getAll()
+    const getFavoritesList = () => {
+        GroceryService.getFavs()
             .then(response => {
                 setGroceries(response.data);
                 console.log(response.data);
@@ -45,7 +45,7 @@ const GroceryList = () => {
     }
 
     const refreshList = () => {
-        getGroceryList();
+        getFavoritesList();
         setCurrentGrocery(null);
         setCurrentIndex(-1);
     }
@@ -83,7 +83,7 @@ const GroceryList = () => {
                 </div>
             </div>
             <div className="col-md-6">
-                <h4>Grocery List</h4>
+                <h4>Favorites List</h4>
 
                 <ul className="list-group">
                     { groceries && groceries.map((grocery, index) => (
@@ -117,9 +117,9 @@ const GroceryList = () => {
                             {currentGrocery.name}
                         </div>
                         <div>
-                          <label>
-                              <strong>Quantity:</strong>
-                          </label>{" "}
+                            <label>
+                                <strong>Quantity:</strong>
+                            </label>{" "}
                             {currentGrocery.quantity}
                         </div>
                         <div>
@@ -165,4 +165,4 @@ const GroceryList = () => {
     );
 };
 
-export default GroceryList;
+export default FavoritesList;
